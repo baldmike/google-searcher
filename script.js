@@ -16,8 +16,32 @@ $(document).ready(function () {
   });
 
   $('#lucky').click(function () {
-    $q.val('kittens');
+    $q.val(randomWord());
     $form.submit();
   });
+
+$('#news').click(function() {
+  $tbm.val('nws');
+})
+
+
+function randomWord() {
+  var words=['kittens', 'puppies', 'peace', 'love', 'joy', 'happiness', 'dance', 'clap', 'sing', 'fart']
+  var randNum = Math.floor((Math.random()*10)+1);
+
+  var randWord = words[randNum]; 
+  console.log(randWord);
+  return randWord;
+
+}
+
+
+
+
+
+
+
+
+
 
 });

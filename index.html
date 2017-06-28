@@ -4,22 +4,41 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="script.js"></script>
   <title>Document</title>
 </head>
 <body>
   <div class="container">
+    <div class="row">
+      <div class="row header col-md-12">
 
-    <h1>Search Google</h1>
-    <form action="https://www.google.com/search" method="GET">
-      <input type="text" name="q" placeholder="Type Your Search Here">
-      <input type="hidden" name="tbm" value="isch">
+      <h1>Search The Interwebs</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="middle row col-md-12">
+        <form action="https://www.google.com/search" method="GET">
+          <input type="text" name="q" id="search" placeholder="Type Your Search Here" required>
+          <label for="web">Web</label>
+          <input type="radio" name="tbm" id="web" value="">
+          <label for="images">Images</label>
+          <input type="radio" name="tbm" id="images" value="isch">
+          <label for="news">News</label>
+          <input type="radio" name="tbm" id="news" value="nws">
+          <p></p>
 
-      <button type="submit">Search</button>
+          <button type="submit">Search</button>
+          <button type="button" id="lucky">Feeling Lucky</button>
+          
+        </form>
+      </div>
+    </div>
+    <div class="row col-md-12">
       <button type="button" id="clear">Clear</button>
-      <button type="button" id="lucky">Feeling Lucky</button>
-    </form>
+    </div>
 
   </div>
 </body>
